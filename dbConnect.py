@@ -10,6 +10,7 @@ db = client.AutotaskRPA
 ticketsDB = db.tickets
 partsDB = db.parts
 
+
 #Gets Part list from Part database based on ticket's device
 def getPartsList(ticketNum):
     ticket = ticketsDB.find_one({'Ticket Number':ticketNum},{'Title':1, '_id':0})
