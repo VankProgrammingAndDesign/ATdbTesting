@@ -1,8 +1,8 @@
 
 from pymongo import MongoClient
 from ticket import Ticket
-
-CLUSTER = "mongodb+srv://rvankerkvoorde:Xsw3iutl6lxDZiRM@cluster0.w04ncaz.mongodb.net/?retryWrites=true&w=majority"
+import keys
+CLUSTER = keys.getURI()
 client = MongoClient(CLUSTER)
 
 db = client.AutotaskRPA
@@ -26,7 +26,7 @@ def getPartsList(ticketNum):
     return parts
 
 
-#Returns ticket dictionary(usually fpr ticket creation)
+#Returns ticket dictionary(usually for ticket creation)
 def getTicketInfo(ticketNum):
     ticketInfo = ticketsDB.find_one({'Ticket Number':ticketNum},{'_id':0})
 
@@ -37,6 +37,10 @@ def getTicketInfo(ticketNum):
     return(ticketInfo)
 
 
+
+
+
+#Testing
 searchEntry = True
 while(searchEntry):  
     searchEntry=input("Enter your ticket: ")
