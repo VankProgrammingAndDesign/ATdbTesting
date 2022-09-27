@@ -1,0 +1,2 @@
+mongoimport -d AutotaskRPA -c tickets --type csv --headerline --mode upsert --upsertFields "Ticket Number" --file ticketUpdate.csv mongodb+srv://rvankerkvoorde:Xsw3iutl6lxDZiRM@cluster0.w04ncaz.mongodb.net/?retryWrites=true&w=majority
+PAUSE
