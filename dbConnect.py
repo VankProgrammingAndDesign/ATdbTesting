@@ -20,6 +20,9 @@ def getPartsList(ticketNum):
 
 
     models = parts.get("MB")
+    
+    
+    
     mobo = models.get(deviceType) 
     parts["Motherboard"] = parts.pop("MB")
     parts.update({"Motherboard": mobo})
